@@ -5,9 +5,6 @@ plugins {
     `maven-publish`
 }
 
-group = "com.github.dev-gvs.detektrules"
-version = "1.0.0"
-
 repositories {
     mavenCentral()
 }
@@ -34,6 +31,10 @@ publishing {
     publications {
         create<MavenPublication>("mavenJava") {
             from(components["java"])
+
+            groupId = "com.github.dev-gvs"
+            artifactId = "detekt-rules"
+            version = "1.0.0"
         }
     }
 }
