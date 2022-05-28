@@ -1,4 +1,4 @@
-package org.example.detekt
+package com.github.dev-gvs.detektrules
 
 import com.google.common.truth.Truth.assertThat
 import io.gitlab.arturbosch.detekt.api.Config
