@@ -34,7 +34,7 @@ publishing {
 
             groupId = "com.github.dev-gvs"
             artifactId = "detekt-rules"
-            version = "1.0.0"
+            version = "1.0.1"
         }
     }
 }
