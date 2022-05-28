@@ -1,6 +1,6 @@
 # Collection of Detekt rules
 
-[![Badge]https://img.shields.io/jitpack/v/github/dev-gvs/detekt-rules?style=plastic](https://jitpack.io/#dev-gvs/detekt-rules)
+[![Badge](https://img.shields.io/jitpack/v/github/dev-gvs/detekt-rules?style=plastic)](https://jitpack.io/#dev-gvs/detekt-rules)
 
 A set of [Detekt](https://detekt.dev) rules to help prevent common errors in Android projects.
 
