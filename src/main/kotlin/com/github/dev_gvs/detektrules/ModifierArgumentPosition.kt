@@ -64,7 +64,7 @@ class ModifierArgumentPosition(config: Config) : Rule(config) {
 
     private inner class ChildrenWithModifiersVisitor : DetektVisitor() {
         override fun visitCallExpression(expression: KtCallExpression) {
-            val lastArgument = expression.valueArguments.last().getArgumentExpression()
+            val lastArgument = expression.valueArguments.lastOrNull()?.getArgumentExpression()
             val modifierArgument = expression.valueArguments.find { arg ->
                 arg.getArgumentExpression()?.isModifierChainExpression() == true
             }
