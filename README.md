@@ -1,34 +1,55 @@
-# Detekt custom rule template
+# Collection of Detekt rules
 
-This repository is a template. You can use it to generate your own repository to write and share your custom rules.
+[![Badge]https://img.shields.io/jitpack/v/github/dev-gvs/detekt-rules?style=plastic](https://jitpack.io/#dev-gvs/detekt-rules)
 
-## How to use it
+A set of [Detekt](https://detekt.dev) rules to help prevent common errors in Android projects.
 
-1. Create a new repository using this one as a template. [Click here][create_template]
-2. Edit MyRule to fit your use case
-3. Share your rule! You can upload your rule to [Maven Central][maven_central] if you want. If you don't want to do all
-   the steps that Maven Central requires you can just share your rule using [jitpack][jitpack].
-4. Extra: you can remove all this README and explain what your rule does and how to configure it.
+# Rules
 
-## Documentation
+Short summary of the rules in this rule set:
 
-You can find the documentation about how to write custom [rules here][custom_rule_documentation].
+- `ModifierArgumentPosition` ensures that `modifier` argument is used as a last parameter for `@Composable` invocation
 
-## Note
 
-Remember that, by default, all rules are disabled. To activate a rule you need to write something like this in
-your yaml configuration:
+Rules can be individually turned `on` or `off` in the configuration file.
 
-```yaml
-MyRuleSet:
-  MyRule:
+# Installation and configuration
+
+Add detekt rules plugin in your `build.gradle` (or use any other [supported method](https://detekt.dev/docs/introduction/extensions#let-detekt-know-about-your-extensions)):
+```
+dependencies {
+  detektPlugins("com.github.dev-gvs:detekt-rules:$version")
+}
+```
+and then add this configuration section to your `detekt-config.yml` to activate the rules:
+```
+dev-gvs:
+  active: true
+  ModifierArgumentPosition:
     active: true
 ```
 
-[create_template]: https://github.com/detekt/detekt-custom-rule-template/generate
+# License
+```
+MIT License
 
-[maven_central]: https://search.maven.org/
+Copyright (c) 2022 Valentin Gusselnikov
 
-[custom_rule_documentation]: https://detekt.github.io/detekt/extensions.html
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-[jitpack]: https://jitpack.io/
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
