@@ -3,7 +3,7 @@ package com.github.dev_gvs.detektrules
 import com.google.common.truth.Truth.assertThat
 import io.gitlab.arturbosch.detekt.api.Config
 import io.gitlab.arturbosch.detekt.rules.KotlinCoreEnvironmentTest
-import io.gitlab.arturbosch.detekt.test.compileAndLintWithContext
+import io.gitlab.arturbosch.detekt.test.lintWithContext
 import org.jetbrains.kotlin.cli.jvm.compiler.KotlinCoreEnvironment
 import org.junit.jupiter.api.Test
 
@@ -32,7 +32,7 @@ internal class ModifierArgumentPositionTest(private val env: KotlinCoreEnvironme
                 }
             }
         """.trimIndent()
-        val findings = ModifierArgumentPosition(Config.empty).compileAndLintWithContext(env, code)
+        val findings = ModifierArgumentPosition(Config.empty).lintWithContext(env, code)
         assertThat(findings).hasSize(2)
     }
 
@@ -58,7 +58,7 @@ internal class ModifierArgumentPositionTest(private val env: KotlinCoreEnvironme
                 }
             }
         """.trimIndent()
-        val findings = ModifierArgumentPosition(Config.empty).compileAndLintWithContext(env, code)
+        val findings = ModifierArgumentPosition(Config.empty).lintWithContext(env, code)
         assertThat(findings).isEmpty()
     }
 }
