@@ -12,6 +12,7 @@ Short summary of the rules in this rule set:
 
 
 Rules can be individually turned `on` or `off` in the configuration file.
+More detailed rule descriptions with code snippets can be found in the [Wiki](https://github.com/dev-gvs/detekt-rules/wiki).
 
 # Installation and configuration
 
