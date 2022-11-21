@@ -12,7 +12,7 @@ repositories {
 dependencies {
     compileOnly("io.gitlab.arturbosch.detekt:detekt-api:1.20.0")
 
-    testImplementation("io.gitlab.arturbosch.detekt:detekt-test:1.20.0")
+    testImplementation("io.gitlab.arturbosch.detekt:detekt-test:1.22.0")
     testImplementation("com.google.truth:truth:1.1.3")
     testImplementation("org.junit.jupiter:junit-jupiter:5.8.2")
 }
