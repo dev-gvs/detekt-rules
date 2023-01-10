@@ -14,7 +14,7 @@ dependencies {
 
     testImplementation("io.gitlab.arturbosch.detekt:detekt-test:1.20.0")
     testImplementation("com.google.truth:truth:1.1.3")
-    testImplementation("org.junit.jupiter:junit-jupiter:5.8.2")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.9.2")
 }
 
 tasks.withType<KotlinCompile> {
